@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    padding: 6rem;
+    font-size: 1em;
+    line-height: 1.5;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+button {
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.js-disabled .button-group {
+    display: none;
+}
+
+.word-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.word-wrapper:hover .button-group-wrapper {
+    display: block;
+}
+
+.word-wrapper.signal .word,
+.word-wrapper.signal:hover .word {
+    color: #fff;
+    background-color: crimson;
+}
+
+.word-wrapper.target .word,
+.word-wrapper.target:hover .word {
+    color: #fff;
+    background-color: royalblue;
+}
+
+.word-wrapper.signal.target .word,
+.word-wrapper.signal.target:hover .word {
+    background: repeating-linear-gradient(
+        45deg,
+        royalblue,
+        royalblue 5px,
+        crimson 5px,
+        crimson 10px
+    );
+    color: #fff;
+}
+
+.word {
+    display: inline-block;
+    padding: 0 3px;
+    border-radius: 3px;
+    background-color: #eee;
+    font-family: Consolas, Courier New, Courier, monospace;
+}
+
+.word:hover {
+    background-color: #888;
+}
+
+.button-group-wrapper {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    /*bottom: calc(100% + 10px);*/
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+}
+
+.button-group {
+    position: relative;
+    display: flex;
+    background-color: #ccc;
+    border: 1px solid #999;
+    border-radius: 3px;
+    /*outline: 10px solid transparent;*/
+}
+
+.button-group::before,
+.button-group::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-style: solid;
+    border-color: transparent;
+    border-bottom: 0;
+}
+
+.button-group::after {
+    border-top-color: #ccc;
+    border-width: 7px;
+}
+
+.button-group::before {
+    border-top-color: #999;
+    border-width: 8px;
+}
+
+.button-group,
+.button {
+    white-space: nowrap;
+}
+
+.button {
+    cursor: pointer;
+    padding: 1px 5px;
+}
+
+.button:hover {
+    background-color: #ddd;
+}
+
+.button:not(:last-child) {
+    /*border-right: 1px solid #999;*/
+}
