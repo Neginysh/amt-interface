@@ -1,9 +1,9 @@
-/*document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
     // Remove the `js-disabled` class so that potentially interactive elements become usable
     if (document.body.classList.contains('js-disabled')) {
         document.body.classList.remove('js-disabled')
     }
-})*/
+})
 
 /*
 * Determine the closest ancestor of an element that has a certain class
